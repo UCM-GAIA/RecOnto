@@ -1,0 +1,1240 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#"
+     xml:base="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:reco="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11">
+        <owl:versionInfo xml:lang="es">0.1</owl:versionInfo>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <rdfs:comment xml:lang="es">Ontología que define la estructura de un sistema recomenadador a partir de la información de entrada, la consulta y la salida esperada.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasVersion"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasInteractionType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasInteractionType">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasRecommenderProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Implementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#implements"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Knowledge_Based"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Interactivity_Property"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Propiedad que define el tipo de interacción que tiene el sistema recomendador con el usuario.</terms:description>
+        <rdfs:comment xml:lang="es">Según el libro &quot;Recommender System The Textbook&quot;, esta propiedad sólo tiene sentifo para las implementaciones de Sistemas basados en concimiento. (Pág. 18).</rdfs:comment>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasItem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasItem">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#RatingData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#ItemData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasItemIdentity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasItemIdentity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#ItemData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Java_Data_Types"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <rdfs:comment xml:lang="es">Propiedad que define que un &apos;Item Data&apos; tiene un identificador de un tipo básico de Java.</rdfs:comment>
+        <owl:versionInfo xml:lang="es">0.1</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasKnowledge -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasKnowledge">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Algorithm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Knowledge"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <rdfs:comment xml:lang="es">Propiedad que define la relación entre un sistema recomendador y un elemento de conocimiento.</rdfs:comment>
+        <owl:versionInfo xml:lang="es">0.1</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Knowledge"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Java_Data_Types"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <rdfs:comment xml:lang="es">Propiedad que define que un elemento del sistema recomendador tiene una propiedad de tipo básico de Java.</rdfs:comment>
+        <owl:versionInfo xml:lang="es">0.1</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasRating -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasRating">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#RatingData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Java_Data_Types"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasRecommenderProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasRecommenderProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Implementation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasUser -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasUser">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#RatingData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#UserData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasUserIdentity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasUserIdentity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#UserData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Java_Data_Types"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <rdfs:comment xml:lang="es">Propiedad que define que un &apos;User Data&apos; tiene un identificador de un tipo básico de Java.</rdfs:comment>
+        <owl:versionInfo xml:lang="es">0.1</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#implements -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#implements">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Implementation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Algorithm"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <rdfs:comment xml:lang="es">Clase que define la propiedad de que un individuo de Implementations define la implementación de un algoritmo de recomendación (&apos;Recommender Algorithm&apos;).</rdfs:comment>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#providesKnowledge -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#providesKnowledge">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Knowledge_Source"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Knowledge"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Propiedad que define como proovedor de un Conocimiento (Knowledge) a una Fuente de Conocimiento (&apos;Knowledge Source&apos;)</terms:description>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#usesAlgorithm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#usesAlgorithm">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_System"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Algorithm"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <rdfs:comment xml:lang="es">Propiedad que define que un sistema recomendador usas un algoritmo de recomendación para predecir los ratings.</rdfs:comment>
+        <owl:versionInfo xml:lang="es">0.1</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Binary_Rating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Binary_Rating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Explicity_Rating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#CSV_Source -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#CSV_Source">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Knowledge_Source"/>
+        <terms:contributor xml:lang="en">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Clase que agrupa todas las fuentes de conocimiento que utilizan un fichero CSV.</terms:description>
+        <rdfs:label xml:lang="en">CSV Source</rdfs:label>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Collaborative_Filtering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Collaborative_Filtering">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Algorithm"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasKnowledge"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#ItemData"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasKnowledge"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#RatingData"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasKnowledge"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#UserData"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Algorithm"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Clase que agrupa todos los algoritmos de recomendación basados en filtrado colaborativo.</terms:description>
+        <rdfs:label xml:lang="en">Collaborative Filtering</rdfs:label>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Content_Based -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Content_Based">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Algorithm"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasKnowledge"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Item_Data_Extended"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Algorithm"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Clase que agrupa los algoritmos de sistemas de recomendación basados en contenido.</terms:description>
+        <rdfs:label xml:lang="en">Content Based</rdfs:label>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Continuous_Values_Rating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Continuous_Values_Rating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Explicity_Rating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Conversational -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Conversational">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Interactivity_Property"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Tipo de interacción conversacional. Es decir, el sistema recomendador va preguntando al usuario preguntas sobre la recomendación, y el sistema va mejorando el resultado según la respuesta del usuario.</terms:description>
+        <rdfs:label xml:lang="en">Converational</rdfs:label>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#DataBase_Source -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#DataBase_Source">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Knowledge_Source"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Clase que agrupa todas las fuentes de conocimiento que utilizan algún tipo de base de datos.</terms:description>
+        <rdfs:label xml:lang="en">DataBase Source</rdfs:label>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Data_Attribute -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Data_Attribute">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Propertity"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Property"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description>Clase que clasifica los atributos o propiedades que puede tener cualquier dato que se utiliza en un sistema recomendador.</terms:description>
+        <rdfs:label xml:lang="en">Data Attribute</rdfs:label>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Diversity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Diversity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Result_Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Domain_Knowledge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Domain_Knowledge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Knowledge"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Tipo de conocimiento asociado al dominio del sistema recomendador. Este tipo de conocimiento es usado por los algoritmos de recomendación basados en conocimiento.</terms:description>
+        <rdfs:label xml:lang="en">Domain Knowledge</rdfs:label>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Explicity_Rating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Explicity_Rating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#RatingData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Implementation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Implementation">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasRecommenderProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Property"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#implements"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Algorithm"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Clase que agrupa todas las implementaciones de algoritmos de recomendación.</terms:description>
+        <rdfs:label xml:lang="en">Implementation</rdfs:label>
+        <owl:priorVersion xml:lang="es">1.0</owl:priorVersion>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Implicity_Rating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Implicity_Rating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#RatingData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Interactivity_Property -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Interactivity_Property">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Property"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Result_Property"/>
+        <terms:contributor xml:lang="en">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Clase que agrupa las formas de interacción de un sistema recomendador.</terms:description>
+        <rdfs:label xml:lang="en">Interactivity Property</rdfs:label>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Interval_Based_Rating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Interval_Based_Rating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Explicity_Rating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#ItemData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#ItemData">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Knowledge"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasItemIdentity"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Knowledge"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Información del item en un sistema recomendador que tiene definidio cómo mínimo un identificador.</terms:description>
+        <rdfs:label xml:lang="en">Item Data</rdfs:label>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Item_Based -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Item_Based">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Neighborhood_Based"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#User_Based"/>
+        <terms:contributor xml:lang="en">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Clase que agrupa los algortimos de filtrado colaborativo que calculan las recomendaciones a partir de un conjutno de items vecinos.</terms:description>
+        <rdfs:label xml:lang="en">Item Based</rdfs:label>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Item_Data_Extended -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Item_Data_Extended">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#ItemData"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasProperty"/>
+                        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#ItemData"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Clase que agrupa los elementos que definen a un item en un sistema recomendador que tiene más información a parte de un identificador.</terms:description>
+        <rdfs:label xml:lang="en">Item Data Extended</rdfs:label>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#JSON_Source -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#JSON_Source">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Knowledge_Source"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Clase que agrupa todas las fuentes de conocimiento que utilizan un fichero JSON.</terms:description>
+        <rdfs:label xml:lang="en">JSON Source</rdfs:label>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Java_Data_Types -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Java_Data_Types">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Data_Attribute"/>
+        <terms:contributor xml:lang="es">Jose Luis Joro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Todos los tipos de Java que son compatibles con cualquier dato que se utilice en un sistema recomendador.</terms:description>
+        <rdfs:label xml:lang="en">Java Data Type</rdfs:label>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Knowledge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Knowledge">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Domain_Knowledge"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#ItemData"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#RatingData"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#UserData"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Component"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <rdfs:comment xml:lang="es">Clase que clasifica los elementos que se utilizan como información para calcular o inferir una recomendación.</rdfs:comment>
+        <rdfs:label xml:lang="en">Knowledge</rdfs:label>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Knowledge_Based -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Knowledge_Based">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Algorithm"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasKnowledge"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Domain_Knowledge"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasKnowledge"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#ItemData"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasKnowledge"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#UserData"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Algorithm"/>
+        <terms:contributor xml:lang="en">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Algoritmos de sistema de recommendación que utiliza alguna fuente de conocimiento para crear las recomendaciones.</terms:description>
+        <rdfs:label xml:lang="en">Knowledge Based</rdfs:label>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Knowledge_Source -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Knowledge_Source">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#providesKnowledge"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Knowledge"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Component"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Clase que agrupa las diferentes fuentes de conocimiento donde se obtiene la información que se puede utilizar en un sistema recomendador.</terms:description>
+        <rdfs:label xml:lang="en">Knowledge Source</rdfs:label>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Model_Based -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Model_Based">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Collaborative_Filtering"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Neighborhood_Based"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Clase que agrupa los algoritmos de filtrado colaborativo que están implementados a partir de un modelo entrenado.</terms:description>
+        <rdfs:label xml:lang="en">Model Based</rdfs:label>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Navegation_Based -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Navegation_Based">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Interactivity_Property"/>
+        <terms:contributor xml:lang="en">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Interacción basado en navegación. El sistema genera la siguiente recomendación a partir de un item que ha seleccionado anteriormente el usuario. Se basa en hacer recomendaciones del tipo &quot;quiero algo similar a X&quot;.</terms:description>
+        <rdfs:label xml:lang="en">Navegation Based</rdfs:label>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Neighborhood_Based -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Neighborhood_Based">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Collaborative_Filtering"/>
+        <terms:contributor xml:lang="en">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Clase que agrupa todos los algoritmos colaborativos que predicen la recomendación a partir de un conjunto de vecinos cercanos.</terms:description>
+        <rdfs:label xml:lang="en">Neighborhood Based</rdfs:label>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Novelty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Novelty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Result_Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Ordered_Categorical_Values_Rating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Ordered_Categorical_Values_Rating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Explicity_Rating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Propertity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Propertity">
+        <terms:contributor xml:lang="en">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Clase que agrupa todos los elementos que sean una propiedad de cualquier clase.</terms:description>
+        <rdfs:label xml:lang="en">Property</rdfs:label>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#RatingData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#RatingData">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Knowledge"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasItem"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasRating"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasUser"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Clase que clasifica los individuos que sean una valoración dentro de un sistema recomendador.</terms:description>
+        <rdfs:label xml:lang="en">Rating Data</rdfs:label>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Algorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Algorithm">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Collaborative_Filtering"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Content_Based"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Knowledge_Based"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Component"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Clase que agrupa todos los algoritmos de recomendación que esten incluidos en RecOnto.</terms:description>
+        <rdfs:label xml:lang="es">Recommender Algorithm</rdfs:label>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Component -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Component">
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Clase que agrupa todos los elementos que son parte de la definición de un sistema recomendador. Los elementos incluidos en esta clase son clases o individuos que explican cómo va a ser el sistema recomendador.</terms:description>
+        <rdfs:label xml:lang="en">Recommender Component</rdfs:label>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Property -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Property">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Propertity"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Clase que agrupa las propiedades que tiene una implementación de un sistema recomendador y sus resultados.</terms:description>
+        <rdfs:label xml:lang="en">Recommender Property</rdfs:label>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_System -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_System">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#usesAlgorithm"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Algorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <rdfs:comment xml:lang="es">Clase que agrupa todos los sistemas recomendadores que se pueden describir con RecOnto.</rdfs:comment>
+        <rdfs:label xml:lang="en">Recommender System</rdfs:label>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Relevance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Relevance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Result_Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Result_Property -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Result_Property">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Search_Based -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Search_Based">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Interactivity_Property"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Interacción basado en búsqueda. El sistema utiliza un conjunto de filtros definidos por el usuario para generar la recomendación.</terms:description>
+        <rdfs:label xml:lang="en">Search Based</rdfs:label>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Serendipity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Serendipity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Result_Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Unary_Rating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Unary_Rating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Explicity_Rating"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Implicity_Rating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#UserData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#UserData">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Knowledge"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasUserIdentity"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Clase que agrupa todos los individuos que describan a un usuario de un sistema recomendador.</terms:description>
+        <rdfs:label xml:lang="en">User Data</rdfs:label>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#User_Based -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#User_Based">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Neighborhood_Based"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Clase que agrupa los algortimos de filtrado colaborativo que calculan las recomendaciones a partir de un conjutno de usuarios vecinos.</terms:description>
+        <rdfs:label xml:lang="en">User Based</rdfs:label>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#User_Data_Extended -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#User_Data_Extended">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#UserData"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#hasProperty"/>
+                        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#UserData"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Clase que agrupa los individuos que describen a un usuario en un sistema recomendador y que tienen más propiedades además de un identificador.</terms:description>
+        <rdfs:label xml:lang="en">User Data Extended</rdfs:label>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#XML_Source -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#XML_Source">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Knowledge_Source"/>
+        <terms:contributor xml:lang="es">Jose Luis Jorro Aragoneses</terms:contributor>
+        <terms:description xml:lang="es">Clase que agrupa todas las fuentes de conocimiento que utilizan un fichero XML.</terms:description>
+        <rdfs:label xml:lang="en">XML Source</rdfs:label>
+        <owl:versionInfo xml:lang="es">1.0</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Object -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Object">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Java_Data_Types"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#String -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#String">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Java_Data_Types"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#boolean -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#boolean">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Java_Data_Types"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#double -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#double">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Java_Data_Types"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#float -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#float">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Java_Data_Types"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#int -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#int">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Java_Data_Types"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#item1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#item1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#ItemData"/>
+        <hasItemIdentity rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#int"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#rating1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#rating1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#RatingData"/>
+        <hasRating rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#int"/>
+        <hasUser rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#user1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#user1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#user1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#UserData"/>
+        <hasUserIdentity rdf:resource="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#int"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/">
+        <terms:publisher rdf:resource="http://purl.org/dc/aboutdcmi#DCMI"/>
+        <terms:title xml:lang="en">Dublin Core Metadata Element Set, Version 1.1</terms:title>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</terms:modified>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/contributor">
+        <rdfs:label xml:lang="en">Contributor</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#contributor-006"/>
+        <rdfs:comment xml:lang="en">An entity responsible for making contributions to the resource.</rdfs:comment>
+        <terms:description xml:lang="en">Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.</terms:description>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/coverage">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#coverage-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</rdfs:comment>
+        <terms:description xml:lang="en">Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:label xml:lang="en">Coverage</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Creator</rdfs:label>
+        <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#creator-006"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#date-006"/>
+        <rdfs:comment xml:lang="en">A point or period of time associated with an event in the lifecycle of the resource.</rdfs:comment>
+        <terms:description xml:lang="en">Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF].</terms:description>
+        <rdfs:label xml:lang="en">Date</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+        <terms:description xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">An account of the resource.</rdfs:comment>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Description</rdfs:label>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#description-006"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/format">
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Format</rdfs:label>
+        <rdfs:comment xml:lang="en">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#format-007"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:description xml:lang="en">Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME].</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/identifier">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#identifier-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:description xml:lang="en">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </terms:description>
+        <rdfs:comment xml:lang="en">An unambiguous reference to the resource within a given context.</rdfs:comment>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/language">
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#language-007"/>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646].</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:comment xml:lang="en">A language of the resource.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc4646.txt"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/publisher">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#publisher-006"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Publisher</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:description xml:lang="en">Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.</terms:description>
+        <rdfs:comment xml:lang="en">An entity responsible for making the resource available.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/relation">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#relation-006"/>
+        <terms:description xml:lang="en">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. </terms:description>
+        <rdfs:label xml:lang="en">Relation</rdfs:label>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#rights-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:description xml:lang="en">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</terms:description>
+        <rdfs:label xml:lang="en">Rights</rdfs:label>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">Information about rights held in and over the resource.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/source">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#source-006"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:comment xml:lang="en">A related resource from which the described resource is derived.</rdfs:comment>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:description xml:lang="en">The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</terms:description>
+        <rdfs:label xml:lang="en">Source</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/subject">
+        <terms:description xml:lang="en">Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary.</terms:description>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:label xml:lang="en">Subject</rdfs:label>
+        <rdfs:comment xml:lang="en">The topic of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</terms:modified>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#subject-007"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+        <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:label xml:lang="en">Title</rdfs:label>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#title-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/type">
+        <rdfs:comment xml:lang="en">The nature or genre of the resource.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#type-006"/>
+        <rdfs:label xml:lang="en">Type</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Binary_Rating"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Continuous_Values_Rating"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Interval_Based_Rating"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Ordered_Categorical_Values_Rating"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Unary_Rating"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#CSV_Source"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#DataBase_Source"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#JSON_Source"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#XML_Source"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Collaborative_Filtering"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Content_Based"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Knowledge_Based"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Conversational"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Navegation_Based"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Search_Based"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Diversity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Novelty"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Relevance"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Serendipity"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Domain_Knowledge"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#ItemData"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#RatingData"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#UserData"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Implementation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Propertity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_Component"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Recommender_System"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#Object"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#String"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#boolean"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#double"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#float"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jljorro/ontologies/2018/0/untitled-ontology-11#int"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

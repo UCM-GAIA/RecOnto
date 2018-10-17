@@ -1,0 +1,584 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://locahost:8080/reconto/RecOnto"
+     xml:base="http://locahost:8080/reconto/RecOnto"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:RecOnto1="http://localhost:8080/reconto/RecOnto#"
+     xmlns:untitled-ontology-6="http://www.semanticweb.org/jljorro/ontologies/2016/6/untitled-ontology-6#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:RecOnto="http://locahost:8080/reconto/RecOnto#">
+    <owl:Ontology rdf:about="http://localhost:8080/reconto/RecOnto">
+        <owl:versionIRI rdf:resource="http://localhost:8080/reconto/RecOnto/0.0.1"/>
+        <rdfs:comment xml:lang="en">RecOnto is an ontology to model all recommender system types. It defines elements that a recommender system contains and its relationships.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Entity -->
+
+    <owl:AnnotationProperty rdf:about="http://localhost:8080/reconto/RecOnto#Entity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#hasEntityInput -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8080/reconto/RecOnto#hasEntityInput">
+        <owl:inverseOf rdf:resource="http://localhost:8080/reconto/RecOnto#isEntityInput"/>
+        <rdfs:domain rdf:resource="http://localhost:8080/reconto/RecOnto#Recommender_Technique"/>
+        <rdfs:range rdf:resource="http://localhost:8080/reconto/RecOnto#Recommender_Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#hasInformationOf -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8080/reconto/RecOnto#hasInformationOf">
+        <owl:inverseOf rdf:resource="http://localhost:8080/reconto/RecOnto#isSavedOn"/>
+        <rdfs:domain rdf:resource="http://localhost:8080/reconto/RecOnto#Knowledge_Source"/>
+        <rdfs:range rdf:resource="http://localhost:8080/reconto/RecOnto#Recommender_Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#hasItemData -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8080/reconto/RecOnto#hasItemData">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://localhost:8080/reconto/RecOnto#isItemDataOf"/>
+        <rdfs:domain rdf:resource="http://localhost:8080/reconto/RecOnto#Item"/>
+        <rdfs:range rdf:resource="http://localhost:8080/reconto/RecOnto#Item_Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#hasJavaType -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8080/reconto/RecOnto#hasJavaType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://localhost:8080/reconto/RecOnto#isJavaTypeOf"/>
+        <rdfs:domain rdf:resource="http://localhost:8080/reconto/RecOnto#Data"/>
+        <rdfs:range rdf:resource="http://localhost:8080/reconto/RecOnto#ReCoLibry_Data_Type"/>
+        <rdfs:comment>Esta función asigna que un concepto definido en el conocimiento tiene un tipo Java asociado.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#hasUserData -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8080/reconto/RecOnto#hasUserData">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://localhost:8080/reconto/RecOnto#isUserDataOf"/>
+        <rdfs:domain rdf:resource="http://localhost:8080/reconto/RecOnto#User"/>
+        <rdfs:range rdf:resource="http://localhost:8080/reconto/RecOnto#User_Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#isEntityInput -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8080/reconto/RecOnto#isEntityInput">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://localhost:8080/reconto/RecOnto#Recommender_Entity"/>
+        <rdfs:range rdf:resource="http://localhost:8080/reconto/RecOnto#Recommender_Technique"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#isItemDataOf -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8080/reconto/RecOnto#isItemDataOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://localhost:8080/reconto/RecOnto#Item_Data"/>
+        <rdfs:range rdf:resource="http://localhost:8080/reconto/RecOnto#Item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#isJavaTypeOf -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8080/reconto/RecOnto#isJavaTypeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://localhost:8080/reconto/RecOnto#ReCoLibry_Data_Type"/>
+        <rdfs:range rdf:resource="http://localhost:8080/reconto/RecOnto#Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#isSavedOn -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8080/reconto/RecOnto#isSavedOn">
+        <rdfs:domain rdf:resource="http://localhost:8080/reconto/RecOnto#Recommender_Entity"/>
+        <rdfs:range rdf:resource="http://localhost:8080/reconto/RecOnto#Knowledge_Source"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#isUserDataOf -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:8080/reconto/RecOnto#isUserDataOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://localhost:8080/reconto/RecOnto#User_Data"/>
+        <rdfs:range rdf:resource="http://localhost:8080/reconto/RecOnto#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Basic_Data -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#Basic_Data">
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/reconto/RecOnto#Knowledge_Data"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Información que es básica para definir un Item o un Usuario.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basic Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#CSV -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#CSV">
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/reconto/RecOnto#Knowledge_Source"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Collaborative_Filtering -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#Collaborative_Filtering">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8080/reconto/RecOnto#hasEntityInput"/>
+                        <owl:someValuesFrom rdf:resource="http://localhost:8080/reconto/RecOnto#Item"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8080/reconto/RecOnto#hasEntityInput"/>
+                        <owl:someValuesFrom rdf:resource="http://localhost:8080/reconto/RecOnto#User"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/reconto/RecOnto#Recommender_Technique"/>
+        <owl:disjointWith rdf:resource="http://localhost:8080/reconto/RecOnto#Content-Based_Filtering"/>
+        <rdfs:comment>Clase donde se agrupan todas las técnicas de recommendación basadas en filtrado colaborativo.</rdfs:comment>
+        <rdfs:label>Collaborative Filtering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Content-Based_Filtering -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#Content-Based_Filtering">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8080/reconto/RecOnto#hasEntityInput"/>
+                        <owl:someValuesFrom rdf:resource="http://localhost:8080/reconto/RecOnto#Item_Decribed"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8080/reconto/RecOnto#hasEntityInput"/>
+                        <owl:someValuesFrom rdf:resource="http://localhost:8080/reconto/RecOnto#User_Described"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/reconto/RecOnto#Recommender_Technique"/>
+        <rdfs:comment>Clase donde se agrupan todas las técnicas de recommendación basadas en filtrado basado en contenido.</rdfs:comment>
+        <rdfs:label>Content-Based Filtering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Data -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#Data"/>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#DataBase -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#DataBase">
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/reconto/RecOnto#Knowledge_Source"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Data_Properties -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#Data_Properties">
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/reconto/RecOnto#Property"/>
+        <rdfs:comment>Información que describe las características de un dato.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Item -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#Item">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost:8080/reconto/RecOnto#hasItemData"/>
+                <owl:someValuesFrom rdf:resource="http://localhost:8080/reconto/RecOnto#Item_Data"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/reconto/RecOnto#Recommender_Entity"/>
+        <owl:disjointWith rdf:resource="http://localhost:8080/reconto/RecOnto#User"/>
+        <rdfs:comment>Clase que agrupa los individuos que modelan a un item en un sistema recomendador.</rdfs:comment>
+        <rdfs:label>Item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Item-Item_Collaborative_Filtering -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#Item-Item_Collaborative_Filtering">
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/reconto/RecOnto#Collaborative_Filtering"/>
+        <rdfs:label>Item-Item CF</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Item_Anonymous -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#Item_Anonymous">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8080/reconto/RecOnto#hasItemData"/>
+                        <owl:hasValue rdf:resource="http://localhost:8080/reconto/RecOnto#Item_ID"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8080/reconto/RecOnto#hasItemData"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://localhost:8080/reconto/RecOnto#Item_Data"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/reconto/RecOnto#Item"/>
+        <owl:disjointWith rdf:resource="http://localhost:8080/reconto/RecOnto#Item_Decribed"/>
+        <rdfs:comment>Clase que agrupa las instancias de Items anónimos. Estos son aquellos que sólo tienen definido un identificador como única información.</rdfs:comment>
+        <rdfs:label>Anonymous Item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Item_Data -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#Item_Data">
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/reconto/RecOnto#Basic_Data"/>
+        <rdfs:comment>Información de los items que se utlizará para hacer las recomendaciones.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Item Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Item_Decribed -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#Item_Decribed">
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/reconto/RecOnto#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#JSON -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#JSON">
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/reconto/RecOnto#Knowledge_Source"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Knowledge_Data -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#Knowledge_Data">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost:8080/reconto/RecOnto#hasJavaType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://localhost:8080/reconto/RecOnto#ReCoLibry_Data_Type"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/reconto/RecOnto#Data"/>
+        <rdfs:comment>Dato que se usa en un recommendor.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommender System Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Knowledge_Source -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#Knowledge_Source">
+        <rdfs:comment>Fuente de conocimiento donde se almacenan los datos de las entidades de recomendación.</rdfs:comment>
+        <rdfs:label>Knowledge Source</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Property -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#Property">
+        <rdfs:label>Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Ratings -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#Ratings">
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/reconto/RecOnto#Recommender_Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#ReCoLibry_Data_Type -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#ReCoLibry_Data_Type">
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/reconto/RecOnto#Data_Properties"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta clase encapsula los tipos de datos que se pueden utilizar en ReCoLibry a partir de los tipos de Java.</rdfs:comment>
+        <rdfs:label>ReCoLibry Data Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Recommender_Entity -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#Recommender_Entity">
+        <rdfs:comment>Clase que agrupa cualquier entidad que participa en un sistema recomendador. Estas entidades pueden ser usuarios, items, técnica, etc.</rdfs:comment>
+        <rdfs:label>Recommender Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Recommender_Technique -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#Recommender_Technique">
+        <rdfs:comment>Clase que agrupa todas las técnicas de recomendación soportadas en RecoLibry.</rdfs:comment>
+        <rdfs:label>Recommender Technique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#User -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#User">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost:8080/reconto/RecOnto#hasUserData"/>
+                <owl:someValuesFrom rdf:resource="http://localhost:8080/reconto/RecOnto#User_Data"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/reconto/RecOnto#Recommender_Entity"/>
+        <rdfs:comment>Clase que agrupa los individuos que modelan a un usuario en un sistema recomendador.</rdfs:comment>
+        <rdfs:label>User</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#User-User_Collaborative_Filtering -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#User-User_Collaborative_Filtering">
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/reconto/RecOnto#Collaborative_Filtering"/>
+        <rdfs:label>User-User CF</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#User_Anonymous -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#User_Anonymous">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8080/reconto/RecOnto#hasUserData"/>
+                        <owl:hasValue rdf:resource="http://localhost:8080/reconto/RecOnto#User_ID"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost:8080/reconto/RecOnto#hasUserData"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://localhost:8080/reconto/RecOnto#User_Data"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/reconto/RecOnto#User"/>
+        <owl:disjointWith rdf:resource="http://localhost:8080/reconto/RecOnto#User_Described"/>
+        <rdfs:comment>Clase que agrupa las instancias de Usuarios anónimos. Estos son aquellos que sólo tienen definido un identificador como única información.</rdfs:comment>
+        <rdfs:label>Anonymous User</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#User_Data -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#User_Data">
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/reconto/RecOnto#Basic_Data"/>
+        <rdfs:comment>Tipo de información del usuario que se utilizará para realizar la recomendación.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#User_Described -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#User_Described">
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/reconto/RecOnto#User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#XML -->
+
+    <owl:Class rdf:about="http://localhost:8080/reconto/RecOnto#XML">
+        <rdfs:subClassOf rdf:resource="http://localhost:8080/reconto/RecOnto#Knowledge_Source"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Item_ID -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/reconto/RecOnto#Item_ID">
+        <rdf:type rdf:resource="http://localhost:8080/reconto/RecOnto#Item_Data"/>
+        <RecOnto1:hasJavaType rdf:resource="http://localhost:8080/reconto/RecOnto#Java_Integer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Java_Boolean -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/reconto/RecOnto#Java_Boolean">
+        <rdf:type rdf:resource="http://localhost:8080/reconto/RecOnto#ReCoLibry_Data_Type"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">boolean</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Java_Double -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/reconto/RecOnto#Java_Double">
+        <rdf:type rdf:resource="http://localhost:8080/reconto/RecOnto#ReCoLibry_Data_Type"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">double</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Java_Float -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/reconto/RecOnto#Java_Float">
+        <rdf:type rdf:resource="http://localhost:8080/reconto/RecOnto#ReCoLibry_Data_Type"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">float</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Java_Integer -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/reconto/RecOnto#Java_Integer">
+        <rdf:type rdf:resource="http://localhost:8080/reconto/RecOnto#ReCoLibry_Data_Type"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Java_Object -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/reconto/RecOnto#Java_Object">
+        <rdf:type rdf:resource="http://localhost:8080/reconto/RecOnto#ReCoLibry_Data_Type"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Object</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#Java_String -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/reconto/RecOnto#Java_String">
+        <rdf:type rdf:resource="http://localhost:8080/reconto/RecOnto#ReCoLibry_Data_Type"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">String</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:8080/reconto/RecOnto#User_ID -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:8080/reconto/RecOnto#User_ID">
+        <rdf:type rdf:resource="http://localhost:8080/reconto/RecOnto#User_Data"/>
+        <RecOnto1:hasJavaType rdf:resource="http://localhost:8080/reconto/RecOnto#Java_Integer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://localhost:8080/reconto/RecOnto#CSV"/>
+            <rdf:Description rdf:about="http://localhost:8080/reconto/RecOnto#DataBase"/>
+            <rdf:Description rdf:about="http://localhost:8080/reconto/RecOnto#JSON"/>
+            <rdf:Description rdf:about="http://localhost:8080/reconto/RecOnto#XML"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
